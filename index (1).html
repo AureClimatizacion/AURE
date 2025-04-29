@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURE Climatización</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #007BFF;
+            color: white;
+            overflow-x: hidden;
+        }
+        h1, h2 {
+            font-family: 'EB Garamond', serif;
+        }
+        header {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 3s ease-in-out;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 4em;
+            opacity: 0;
+            animation: slideIn 3s forwards;
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        section {
+            padding: 2em;
+            background-color: white;
+            color: black;
+        }
+        .toggle-section {
+            background-color: #eee;
+            padding: 1em;
+            margin: 1em 0;
+            cursor: pointer;
+        }
+        .content {
+            display: none;
+            padding: 1em;
+            background-color: #f9f9f9;
+        }
+        footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 8px;
+            color: #007BFF;
+        }
+    </style>
+    <script>
+        function toggle(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo AURE" style="width: 200px; margin-bottom: 20px;">
+        <h1>AURE CLIMATIZACIÓN</h1>
+    </header>
+
+    <section>
+        <img src="foto.jpg" alt="Imagen de presentación" style="width: 100%; max-width: 600px;">
+        <p>Es un placer para mí presentarle AURE Climatización, una empresa mexicana con más de 10 años de experiencia en el sector de aire acondicionado...</p>
+        <div class="toggle-section" onclick="toggle('mision')"><i class="fas fa-bullseye"></i> Nuestra Misión</div>
+        <div class="content" id="mision">
+            En Aure Climatización, nos dedicamos a proporcionar soluciones de aire acondicionado de la más alta calidad...
+        </div>
+        <div class="toggle-section" onclick="toggle('vision')"><i class="fas fa-eye"></i> Nuestra Visión</div>
+        <div class="content" id="vision">
+            Aspiramos a ser líderes en el mercado de climatización en México...
+        </div>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-cogs"></i> Servicios</h2>
+        <ul>
+            <li>Instalación y Reparación de aire acondicionado, refrigeración comercial...</li>
+            <li>Venta de equipo, CHILLERS, MULTI V LG, EMERSON, APC...</li>
+            <li>Asesoría en proyectos de instalación, mantenimiento...</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-briefcase"></i> Referencias</h2>
+        <p>Hemos tenido el privilegio de colaborar con una amplia variedad de clientes...</p>
+        <ul>
+            <li>CFE, OCESA, CITY EXPRESS, CODERE, MARKEM, IMAJE, RISOUL DE MEXICO…</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-envelope"></i> Contacto</h2>
+        <p>
+            <strong>RFC:</strong> AUSS781103HT1<br>
+            <strong>Director:</strong> Salvador Aguillón Soto<br>
+            <strong>Domicilio:</strong> Privada Caseres MZ5 LT9 Interior 7, Col. Villa del Real, Tecámac, Edo. de México, C.P. 55749<br>
+            <strong>Email:</strong> salvador.aguillon@hotmail.com<br>
+            <strong>Móvil:</strong> 55-55-02-34-09
+        </p>
+    </section>
+
+    <footer>
+        &copy; 2025 AURE Climatización
+    </footer>
+</body>
+</html>
